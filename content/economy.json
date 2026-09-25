@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "version": 1,
+  "startingGrant": { "coins": 1000, "rainbowDabs": 0, "hints": 3 },
+  "winReward": { "base": 20, "perStar": 10, "replayPaysStarImprovementOnly": true },
+  "chest": { "everyNthLevel": 10, "coins": 100 },
+  "daily": {
+    "coins": [20, 30, 40, 50, 60, 80],
+    "day7Gift": { "coins": 50, "rainbowDabs": 1, "hints": 0 },
+    "resetOnMissedDay": false
+  },
+  "prices": {
+    "plusOneDab": [900, 1400, 1900],
+    "rewind": 700,
+    "rewindDabs": 5,
+    "extraUndo": 300,
+    "freeUndosPerAttempt": 1,
+    "hint": 200,
+    "rainbowBooster": 500
+  },
+  "offers": {
+    "minLevelForOffers": 15,
+    "boosterEveryNthLevel": 10,
+    "starterOfferFirstLossAtOrAfterLevel": 15
+  },
+  "products": [
+    { "id": "com.raindrop.bakesaleicing.coins.handful", "name": "Handful", "kind": "coins", "grant": { "coins": 1000, "rainbowDabs": 0, "hints": 0 }, "referencePrice": "$1.99", "badge": null, "oneTime": false },
+    { "id": "com.raindrop.bakesaleicing.coins.basket", "name": "Basket", "kind": "coins", "grant": { "coins": 3000, "rainbowDabs": 0, "hints": 0 }, "referencePrice": "$4.99", "badge": "Popular", "oneTime": false },
+    { "id": "com.raindrop.bakesaleicing.coins.crate", "name": "Crate", "kind": "coins", "grant": { "coins": 7000, "rainbowDabs": 0, "hints": 0 }, "referencePrice": "$9.99", "badge": null, "oneTime": false },
+    { "id": "com.raindrop.bakesaleicing.coins.pantry", "name": "Pantry", "kind": "coins", "grant": { "coins": 16000, "rainbowDabs": 0, "hints": 0 }, "referencePrice": "$19.99", "badge": null, "oneTime": false },
+    { "id": "com.raindrop.bakesaleicing.starter", "name": "Starter bundle", "kind": "starter", "grant": { "coins": 2000, "rainbowDabs": 3, "hints": 3 }, "referencePrice": "$2.99", "badge": null, "oneTime": true }
+  ]
+}
