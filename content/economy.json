@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 1,
+  "version": 2,
   "startingGrant": { "coins": 1000, "rainbowDabs": 0, "hints": 3 },
   "winReward": { "base": 20, "perStar": 10, "replayPaysStarImprovementOnly": true },
   "chest": { "everyNthLevel": 10, "coins": 100 },
@@ -22,6 +22,15 @@
     "minLevelForOffers": 15,
     "boosterEveryNthLevel": 10,
     "starterOfferFirstLossAtOrAfterLevel": 15
+  },
+  "switches": {
+    "offer_plus1_enabled": true,
+    "offer_rewind_enabled": true,
+    "offer_booster_enabled": true,
+    "offer_starter_popup_enabled": true,
+    "shop_enabled": true,
+    "daily_reward_enabled": true,
+    "remote_levels_enabled": true
   },
   "products": [
     { "id": "com.raindrop.bakesaleicing.coins.handful", "name": "Handful", "kind": "coins", "grant": { "coins": 1000, "rainbowDabs": 0, "hints": 0 }, "referencePrice": "$1.99", "badge": null, "oneTime": false },
