@@ -1,11 +1,11 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="How Bake Sale Icing handles local progress, purchases, and support requests.">
+<meta name="description" content="How Bake Sale Icing handles local progress, purchases, optional gameplay stats, and support requests.">
 <title>Bake Sale Icing — Privacy</title><link rel="stylesheet" href="style.css"></head><body><main>
 
 <header>
 <div class="brand">Raindrop LLC</div>
 <h1>Bake Sale Icing privacy</h1>
-<p class="sub">Last updated September 25, 2026</p>
+<p class="sub">Last updated September 27, 2026</p>
 <nav aria-label="Site"><a href="index.html">Support</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
 </header>
 
@@ -15,33 +15,69 @@ with privacy questions or requests.</p>
 
 <h2>Information on your device</h2>
 <p>The game stores your level progress, stars, coin balance, settings, and purchase-delivery
-records on your device. Gameplay analytics — such as which levels you play and how you do on
-them — are recorded only on your device, to help balance the game, and are never automatically
-uploaded to us. You can choose to export this data yourself from Settings. There is no game account and no app-operated cloud progress sync. A small backup of your coin
-balance, items, and purchase-delivery records is kept in this device's Keychain, which stays on this
-device and lets them come back if you reinstall. Your operating system's backup settings may include
-this app data.</p>
+records on your device. It also keeps a gameplay log on your device (which levels you play and how
+they go), tagged with a random install ID that the app creates when it is first opened. You can
+export this log yourself from Settings → Export gameplay data. There is no game account and no
+app-operated cloud progress sync.</p>
+<p>A small backup of your coin balance, items, and purchase-delivery records is kept in this
+device's Keychain, which stays on this device and lets them come back if you reinstall. Your
+operating system's backup settings may include this app data.</p>
+
+<h2>Gameplay stats and crash reports (only if you choose "Share Stats")</h2>
+<p>During the first level, after How to play, the game asks once whether you want to share gameplay stats. Nothing is
+sent to Google unless you tap <strong>Share Stats</strong>. If you tap "No thanks", or never answer,
+the app does not contact Firebase at all.</p>
+<p>If you tap Share Stats, the app uses these Google services:</p>
+<ul>
+<li><strong>Google Analytics for Firebase</strong>: gameplay events (levels started and finished,
+with taps, stars, time, hints and undos used; offers shown and accepted, with your coin balance;
+session start and length; finishing How to play), in-app purchase events, an app-instance
+ID, the random install ID, device model, iOS version, app version, language and country. Google
+derives a general (city-level) location from your IP address; it does not store the IP address.</li>
+<li><strong>Firebase Crashlytics</strong>: crash reports (stack traces, device model, iOS version,
+free memory and disk space), a Firebase installation ID and the random install ID.</li>
+<li><strong>Firebase Remote Config</strong>: fetches game settings such as prices in coins and
+rewards, using a Firebase installation ID, app version, language, country and time zone.</li>
+</ul>
+<p>We use this data to find crashes and to balance levels and prices. It uses a random ID, never your
+name, email or Apple ID, and it is not used for advertising or to track you across other companies'
+apps or websites. The app does not use the advertising identifier (IDFA), and all advertising
+signals are turned off.</p>
+<p><strong>Retention:</strong> Google Analytics data is kept for 14 months, then deleted. Crashlytics
+keeps crash reports for 90 days.</p>
+<p><strong>Changing your mind:</strong> turn off Settings → <strong>Share gameplay stats</strong> at
+any time. The app then stops sending Analytics and Crashlytics data, resets its Analytics ID,
+deletes unsent crash reports, stops attaching the random install ID, and stops fetching Remote Config;
+from the next launch it does not start Firebase at all. Data sent before you turned it off is
+kept until the retention period ends. To have it deleted sooner, email us your export from
+Settings → Export gameplay data; it contains the random install ID we need to find your data.</p>
+<p>Read <a href="https://policies.google.com/privacy">Google's privacy policy</a> and
+<a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a>.</p>
 
 <h2>Purchases</h2>
 <p>Apple processes payments. We do not receive your payment-card number. The app uses RevenueCat
 to validate purchases, deliver coin packs and the starter bundle, support restoration, and prevent
 purchase fraud. RevenueCat also gives us aggregate sales reports.</p>
-<p>RevenueCat processes purchase receipts and transaction details using an automatically assigned
-anonymous app user identifier, not your name or email address. The app contacts RevenueCat when it
-starts, to check purchase status and available products, even if you have not made a purchase.
-These requests include your device's identifier for vendors (a device identifier Apple assigns
-to each developer's apps), which RevenueCat uses for purchase processing and fraud prevention. It
-is not used for advertising or to track you across other companies' apps or websites.
-An anonymous identifier is not a promise that no data is collected; see RevenueCat's own privacy
-policy for what it processes on our behalf.</p>
+<p>RevenueCat processes purchase receipts and transaction details under the app's random install
+ID, not your name or email address. The app contacts RevenueCat when it starts, to check purchase
+status and available products, even if you have not made a purchase and whether or not you share
+stats. These requests include your device's identifier for vendors (a device identifier Apple
+assigns to each developer's apps), which RevenueCat uses for purchase processing and fraud
+prevention. It is not used for advertising or to track you across other companies' apps or
+websites.</p>
 <p>Read <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a> and
 <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a> for details about their
 services.</p>
 
+<h2>Service providers</h2>
+<p>Google (Firebase), RevenueCat and GitHub process data for us only to provide the services
+described on this page. They give your data the same or equal protection as this policy
+describes.</p>
+
 <h2>Advertising and tracking</h2>
-<p>Bake Sale Icing has no advertising SDK, no rewarded ads, and no cross-app or cross-site
-tracking. We do not use third-party analytics SDKs. We do not sell or share your information for
-targeted advertising.</p>
+<p>Bake Sale Icing has no advertising SDK and no ads. It does not track you across other
+companies' apps or websites, and it does not show Apple's tracking prompt because it does not
+track. We do not sell or share your information for targeted advertising.</p>
 
 <h2>Children</h2>
 <p>Bake Sale Icing is not directed at children and does not knowingly collect personal information
@@ -57,7 +93,9 @@ applicable legal obligations.</p>
 <h2>Retention and your choices</h2>
 <p>Local progress and settings remain on your device until you delete the app or otherwise clear
 its data; device backups may retain earlier copies. Deleting the app removes this local data, except
-the small Keychain backup described above, which iOS keeps on the device. Deleting the app does not cancel or refund a purchase, or erase purchase records held by Apple or RevenueCat.</p>
+the small Keychain backup described above, which iOS keeps on the device. Deleting the app does not
+cancel or refund a purchase, or erase purchase records held by Apple or RevenueCat, or stats already
+shared with Google.</p>
 <p>We retain purchase records as needed to provide purchased content, handle support and disputes,
 prevent fraud, and meet legal obligations. Contact us to request access to, correction of, or
 deletion of information we hold. Depending on where you live, you may have additional privacy
